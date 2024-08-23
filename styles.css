@@ -1,0 +1,206 @@
+/* Reset and Global Styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(120deg, #1a1a1a, #333) fixed;
+    animation: gradientAnimation 10s ease infinite alternate;
+    color: #fff;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Logo animation and glow */
+.logo img {
+    max-width: 100px;
+    animation: logoAnimation 3s ease infinite alternate, glowAnimation 1.5s ease infinite alternate;
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes glowAnimation {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(0, 0, 255, 0.8);
+    }
+}
+
+
+
+/* Header styling */
+header {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    animation: fadeInUp 1s ease;
+    transition: transform 0.3s ease; /* Add transition effect */
+
+}
+
+.image-section a {
+    display: block; /* Make the anchor element a block-level element */
+    margin: 0 10px;
+    text-decoration: none; /* Remove default underline */
+
+}
+
+.image-section img {
+    width: 300px; /* Set a fixed width for all images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    animation: zoomIn 1s ease;
+    transition: transform 0.3s ease; /* Add transition effect */
+
+}
+
+.image-section a:hover img {
+    transform: scale(1.1); /* Apply scaling effect on hover */
+
+}
+
+
+/* Button section styling */
+.button-section, .button-section-alt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+.button-section button, .button-section-alt button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    animation: bounceIn 1s ease;
+    background: linear-gradient(135deg, #00FFFF, #0080FF);
+    transition: background 0.3s ease;
+    padding-left: 15px; /* Add space for icon */
+
+}
+
+.button-section button .fas, .button-section-alt button .fas {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.button-section button:hover {
+    background: linear-gradient(135deg, #00C9FF, #0056FF);
+}
+
+.button-section-alt button:hover {
+    transform: translateY(-3px); /* Move the button up on hover */
+    background: linear-gradient(135deg, #FFAA00, #FF6600); /* Change the hover background color */
+
+}
+
+/* Symbol in button */
+.btn-symbol {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+/* Alternative button section */
+.button-section-alt button {
+    background: linear-gradient(135deg, #FFB200, #FF5900);
+    color: #fff;
+    animation: pulse 1.5s infinite;
+    transition: transform 0.3s ease, background 0.3s ease; /* Add transition for both transform and background */
+
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Paragraph section styling */
+.paragraph-section {
+    padding: 20px;
+    text-align: center;
+    animation: fadeInUp 1s ease;
+}
+
+.paragraph-section p {
+    line-height: 1.6;
+}
+
+.paragraph-section a:link {
+    color: #000; /* Change the link color on hover */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
